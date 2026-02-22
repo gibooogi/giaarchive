@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>giaarchive</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Courier New', cursive;
+  background:#f3e8ff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-x:hidden;
+}
+
+/* STICKER */
+.sticker{
+  position:fixed;
+  font-size:40px;
+  opacity:0.5;
+  z-index:0;
+  animation: wiggle 4s ease-in-out infinite;
+}
+.s1{ top:40px; left:60px;}
+.s2{ bottom:60px; right:80px;}
+.s3{ top:100px; right:120px;}
+.s4{ bottom:100px; left:100px;}
+
+@keyframes wiggle{
+  0%,100%{ transform:rotate(0deg);}
+  50%{ transform:rotate(5deg);}
+}
+
+/* BOOK */
+.book{
+  width:800px;
+  height:500px;
+  background:white;
+  border-radius:20px;
+  display:flex;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  position:relative;
+  margin-top:80px;
+  z-index:1;
+}
+.book::after{
+  content:"";
+  width:2px;
+  background:#f3c1d8;
+  position:absolute;
+  top:0; bottom:0;
+  left:50%;
+}
+.left,.right{
+  width:50%;
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.left img{
+  width:180px;
+  border-radius:20px;
+  border:5px solid #ffcce6;
+}
+.right h2{ color:#c084fc; }
+.right p{
+  color:#555;
+  text-align:center;
+  line-height:1.6;
+}
+
+/* ===== FPTP SECTION ===== */
+.fptp-section{
+  width:100%;
+  padding:140px 40px;
+  display:flex;
+  justify-content:center;
+}
+
+.fptp-wrapper{
+  display:flex;
+  gap:80px;
+  align-items:center;
+}
+
+/* FOTO */
+.fptp-photos{
+  display:flex;
+  gap:30px;
+  align-items:flex-start;
+}
+
+.photo-tall{
+  width:281px;
+  height:894px;
+  object-fit:cover;
+  border-radius:30px;
+  border:4px solid #ffcce6;
+  box-shadow:0 20px 40px rgba(0,0,0,0.18);
+  animation: float-normal 5s ease-in-out infinite;
+}
+
+.photo-chat{
+  width:568px;
+  height:1011px;
+  object-fit:cover;
+  border-radius:30px;
+  border:4px solid #ffcce6;
+  box-shadow:0 20px 40px rgba(0,0,0,0.18);
+  transform-origin: top left;
+  animation: float-small 5s ease-in-out infinite;
+  animation-delay:1.5s;
+}
+
+/* CAPTION */
+.fptp-caption{
+  max-width:360px;
+}
+.fptp-caption h2{
+  color:#c084fc;
+  margin-bottom:20px;
+}
+.fptp-caption p{
+  color:#444;
+  line-height:1.8;
+}
+
+/* FLOAT NORMAL */
+@keyframes float-normal{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-18px); }
+  100%{ transform:translateY(0); }
+}
+
+/* FLOAT + SCALE (KHUSUS FOTO 3) */
+@keyframes float-small{
+  0%{ transform:translateY(0) scale(0.65); }
+  50%{ transform:translateY(-18px) scale(0.65); }
+  100%{ transform:translateY(0) scale(0.65); }
+}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .fptp-wrapper{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sticker s1">💖</div>
+<div class="sticker s2">⭐</div>
+<div class="sticker s3">🌸</div>
+<div class="sticker s4">💎</div>
+
+<div class="book">
+  <div class="left">
+    <img src="profile.jpeg">
+    
+  </div>
+  <div class="right">
+    <h2>HIII ALEEEEX ♡</h2>
+    <p>
+      welcome to my little website ♡ <br><br>
+      this is a tiny archive i made for you 💗
+    </p>
+  </div>
+</div>
+
+<section class="fptp-section">
+  <div class="fptp-wrapper">
+
+    <div class="fptp-photos">
+      <img src="foto2.PNG" class="photo-tall">
+      <img src="foto3.jpeg" class="photo-chat">
+    </div>
+
+    <div class="fptp-caption">
+      <h2>little memories ♡</h2>
+      <p>
+        i just wanted to say it’s been really nice getting to know you.
+        it hasn’t been that long, but talking to you already feels easy and
+        comfortable. i didn’t expect it, but our conversations just flow,
+        and i kinda like that. it feels like we’re on the same wavelength,<br>
+        
+        i’d honestly love to talk in person sometime soon.
+        i feel like it would be even better irl. let’s actually make that happen.
+        and yeapp, thank u so much to aji wkwk,
+        that was such a random connection but i’m really glad it happened. 💭<br>
+
+        also, the photo on here is kinda cringe......
+        but the chat screenshot is our first conversation.
+        i was actually so happy when you made the first move...hihi
+        
+        okay soooo that’s it for now,
+        but i’ll make a better version of this when we have more memories together <3
+        22 feb 2026
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
